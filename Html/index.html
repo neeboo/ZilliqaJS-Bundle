@@ -23,7 +23,11 @@
         const {Zilliqa}=window.ZilliqaJS
         const zjs=new Zilliqa('https://api-scilla.zilliqa.com')
 
-        zjs.provider.send('GetNetworkId').then(console.log)
+           zjs.provider.send('GetLatestTxBlock').then(function (result) {
+              console.log("Latest Block is: " + result.result.header.BlockNum);
+           }, function (err) {
+              console.log("Something broke");
+           });
         
 
     </script>
