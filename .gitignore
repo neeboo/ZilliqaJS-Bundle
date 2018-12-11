@@ -22,4 +22,5 @@ webpack.config.js
 scripts
 lerna.json
 .github
+dist
 
